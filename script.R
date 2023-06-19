@@ -1,5 +1,5 @@
-#setwd('C:/Users/marty/Desktop/GITHUB/proj_optymal')
-setwd('/Users/mateuszpindyk/Documents/GitHub/set_covering_problem')
+#setwd('C:/Users/marty/Desktop/GITHUB/set_covering_problem')
+#setwd('/Users/mateuszpindyk/Documents/GitHub/set_covering_problem')
 n_rows <- sample(1:50, 1)
 n_cols <- sample(1:50, 1)
 
