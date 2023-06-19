@@ -1,5 +1,6 @@
 #setwd('C:/Users/marty/Desktop/GITHUB/set_covering_problem')
 #setwd('/Users/mateuszpindyk/Documents/GitHub/set_covering_problem')
+setwd("~/GitHub/set_covering_problem")
 n_rows <- sample(1:50, 1)
 n_cols <- sample(1:50, 1)
 
@@ -86,4 +87,16 @@ sum(koszty_suma)
 
 
 
-#solver
+#lpSolve
+library(lpSolve)
+f.obj<-koszty
+f.con<-matrix1
+f.dir <- c()
+for (i in c(1:wysokosc)) {
+  f.dir <- append(f.dir, ">=")
+}
+f.rhs <- c()
+for (i in c(1:wysokosc)) {
+  f.rhs <- append(f.rhs, 1)
+}
+lp("min", f.obj, f.con, f.dir, f.rhs, all.int=TRUE)
